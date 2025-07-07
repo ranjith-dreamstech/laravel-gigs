@@ -79,10 +79,16 @@ class GigsController extends Controller
         return view('frontend.gigs.edit.index', compact('slug', 'gigs', 'categories'));
     }
 
-    public function bookingdetails(): View
+    public function bookingdetails(Request $request): View
     {
+        $gigId = $request->input('gig_id');
+        
+        if (!$gigId) {
+            abort(400, 'Gig ID is required');
+        }
+
         /** @var Gigs|null $gigsInfo */
-        $gigsInfo = Gigs::find(11);
+        $gigsInfo = Gigs::find($gigId);
 
         if (! $gigsInfo) {
             abort(404, 'Gig not found');
@@ -110,9 +116,6 @@ class GigsController extends Controller
 
     public function storeGigs(Request $request): JsonResponse
     {
-        //enable error reporting
-        ini_set('display_errors', 1);
-        
         return response()->json($this->gigsRepository->storeGigs($request));
     }
 
