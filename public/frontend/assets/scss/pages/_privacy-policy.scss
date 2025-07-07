@@ -1,0 +1,34 @@
+@use "../utils/variables";
+
+.privacy-section {
+	.terms-policy {
+		ul {
+			li {
+				font-size: variables.$font-size-16;
+				margin: 0 0 11px;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				align-items: center;
+				span {
+					width: 8px;
+					height: 8px;
+					border-radius: 50px;
+					margin-right: 10px;
+					background: variables.$gray-500;
+				}
+			}
+		}
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.mail-link {
+		color: variables.$secondary;
+		&:hover {
+			color: variables.$primary;
+		}
+	}
+}

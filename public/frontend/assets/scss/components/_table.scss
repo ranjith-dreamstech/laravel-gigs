@@ -1,0 +1,253 @@
+@use "../utils/variables";
+
+.table {
+	tr {
+		padding: 15px;
+		font-size: variables.$font-size-15;
+		border-color: variables.$gray-100;
+		color: variables.$gray-500;
+		background: variables.$white;
+	}
+	tbody {
+		td {
+			padding: 15px;
+			font-size: variables.$font-size-15;
+			color: variables.$gray-500;
+			background: variables.$white;
+		}
+	}
+	th {
+		padding: 15px;
+		font-size: variables.$font-size-15;
+		color: variables.$gray-500;
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+	td {
+		vertical-align: middle;
+		white-space: nowrap;
+		background: variables.$white;
+		h2 {
+			display: inline-block;
+			font-size: variables.$font-size-14;
+			font-weight: variables.$font-weight-normal;
+			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+			a {
+				color: #4F4F4F;
+				font-size: variables.$font-size-14;
+				font-weight: variables.$font-weight-medium;
+			}
+		}
+	}
+}
+.table>:not(:first-child) {
+    border-top: 0;
+}
+.table-avatar {
+	a.avatar {
+		line-height: normal;
+		width: 36px;
+		height: 36px;
+		margin-right: 8px;
+		img {
+			border-radius: 50%;
+		}
+	}
+}
+.upload-for-text {
+	max-width: 215px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+table.table {
+	td {
+		h2.table-avatar {
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			display: -webkit-inline-box;
+			display: -ms-inline-flexbox;
+			display: inline-flex;
+			font-size: inherit;
+			font-weight: variables.$font-weight-normal;
+			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+			white-space: nowrap;
+		}
+		h2 {
+			a {
+				&:hover {
+					color: variables.$primary;
+				}
+			}
+			span {
+				color: #74788D;
+				display: block;
+				font-size: variables.$font-size-13;
+				margin-top: 7px;
+				font-weight: normal;
+			}
+		}
+	}
+}
+table.dataTable {
+	margin-top: 0 !important;
+	td {
+		font-size: variables.$font-size-14;
+		font-weight: variables.$font-weight-normal;
+		color: variables.$gray-500;
+		a {
+			font-weight: variables.$font-weight-medium;
+			color: variables.$gray-900;
+			&:hover {
+				color: variables.$primary;
+			}
+		}
+		a.cancel {
+			font-weight: variables.$font-weight-normal;
+			color: variables.$gray-500;
+			&:hover {
+				color: variables.$primary;
+			}
+		}
+		.view-icon {
+			color: variables.$gray-500;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50px;
+			&:hover {
+				background-color: variables.$light;
+			}
+		}
+	}
+	th {
+		font-size: variables.$font-size-14;
+		font-weight: 600 !important;
+		color: variables.$gray-900;
+		background: variables.$light;
+	}
+	thead {
+		.sorting {
+			&:before {
+				right: 1em;
+				content: "\f0de";
+				font-family: "Font Awesome 5 Free";
+			}
+			&:after {
+				right: 1em;
+				content: "\f0dd";
+				font-family: "Font Awesome 5 Free";
+			}
+		}
+		.sorting_asc {
+			&:before {
+				right: 1em;
+				content: "\f0de";
+				font-family: "Font Awesome 5 Free";
+			}
+			&:after {
+				right: 1em;
+				content: "\f0dd";
+				font-family: "Font Awesome 5 Free";
+			}
+		}
+		.sorting_desc {
+			&:before {
+				right: 1em;
+				content: "\f0de";
+				font-family: "Font Awesome 5 Free";
+			}
+			&:after {
+				right: 1em;
+				content: "\f0dd";
+				font-family: "Font Awesome 5 Free";
+			}
+		}
+		.sorting_asc_disabled {
+			&:before {
+				right: 1em;
+				content: "\f0de";
+				font-family: "Font Awesome 5 Free";
+			}
+			&:after {
+				right: 1em;
+				content: "\f0dd";
+				font-family: "Font Awesome 5 Free";
+			}
+		}
+		.sorting_desc_disabled {
+			&:before {
+				right: 1em;
+				content: "\f0de";
+				font-family: "Font Awesome 5 Free";
+			}
+			&:after {
+				right: 1em;
+				content: "\f0dd";
+				font-family: "Font Awesome 5 Free";
+			}
+		}
+	}
+}
+.invoice-table {
+	th {
+		font-size: variables.$font-size-14 !important;
+		font-weight: 600 !important;
+		color: variables.$gray-900 !important;
+		background-color: #f0f0f0 !important;
+	}
+}
+div.dt-container {
+	div.dt-layout-row {
+		margin: 0;
+	}
+	div.dt-layout-row.dt-layout-table {
+		margin-bottom: 10px;
+	}
+}
+.table-striped {
+	>tbody {
+		>tr {
+			&:nth-child(odd) {
+				>td {
+					background-color: rgba(242, 242, 242, 0);
+				}
+			}
+			&:nth-child(even) {
+				>* {
+					background-color: variables.$white;
+				}
+			}
+		}
+	}
+}
+.form-wrap.form-item {
+	margin-bottom: 15px;
+}
+a.disable {
+	color: variables.$gray-100;
+	pointer-events: none;
+}
+.plan-billing-info {
+	.form-control {
+		padding: 7px 12px 7px 32px !important;
+	}
+	.table-action {
+		a {
+			width: 25px;
+			height: 25px;
+			border: 1px solid variables.$gray-100;
+			background: variables.$light;
+			color: #000;
+			padding: 0px;
+			border-radius: 5px;
+		}
+	}
+}

@@ -1,0 +1,447 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.page-back-btn {
+	a {
+		color: #E82646;
+		font-weight: variables.$font-weight-medium;
+		font-size: variables.$font-size-15;
+	}
+}
+.settings-page-lists {
+	.settings-head {
+		display: flex;
+		align-items: center;
+		background: variables.$white;
+		border-radius: 10px;
+		flex-wrap: wrap;
+		margin-bottom: 24px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid variables.$gray-100;
+		li {
+			margin-right: 16px;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				font-size: variables.$font-size-14;
+				font-weight: variables.$font-weight-medium;
+				padding: 6px 16px;
+				color: variables.$gray-900;
+				border-radius: 20px;
+				border: 1px solid variables.$gray-100;
+			}
+			a.active {
+				color: variables.$white;
+				background: variables.$black;
+			}
+		}
+	}
+}
+.settings-info {
+	padding: 20px;
+    @include mixins.respond-below(sm) {
+		padding: 10px;
+	}
+}
+.settings-card {
+	border: 1px solid variables.$gray-100;
+	margin-bottom: 24px;
+	border-radius: 10px;
+	.settings-card-head {
+		border-bottom: 1px solid variables.$gray-100;
+		padding: 12px 20px;
+		border-radius: 10px 10px 0 0;
+		h4 {
+			margin-bottom: 0;
+			font-size: variables.$font-size-18;
+			font-weight: variables.$font-weight-semibold;
+		}
+	}
+	h6 {
+		margin-bottom: 0;
+	}
+}
+.settings-card-body {
+	padding: 20px;
+}
+.plan-billing-info {
+	.settings-card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
+        @include mixins.respond-below(sm) {
+            flex-direction: column;
+            gap: 20px;
+        }
+		.settings-card-head {
+			border: none;
+			padding: 0px;
+		}
+		h6 {
+			margin-bottom: 4px;
+			font-size: variables.$font-size-15;
+		}
+	}
+	.settings-card-body {
+		padding: 0px;
+	}
+	.btn-item {
+		.btn {
+			padding: 6px 12px;
+			font-size: variables.$font-size-13;
+            @include mixins.respond-below(sm) {
+                padding: 4px 10px;
+                font-size: variables.$font-size-12;
+            }
+		}
+	}
+	.settings-card-head {
+		font-size: variables.$font-size-13;
+	}
+}
+.img-upload-head {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+    @include mixins.respond-below(sm) {
+		display: block;
+	}
+	.profile-img {
+		flex-shrink: 0;
+		margin-right: 12px;
+		position: relative;
+		border-radius: 5px;
+        @include mixins.respond-below(sm) {
+            text-align: center;
+            margin-bottom: 13px;
+        }
+		img {
+			width: 90px;
+			height: 90px;
+			border-radius: 15px;
+			background: variables.$light;
+			padding: 10px;
+			border: 1px dashed variables.$gray-100;
+            @include mixins.respond-below(xl) {
+                width: 100px;
+		        height: 100px;
+            }
+		}
+		i {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: variables.$danger;
+			&:hover {
+				color: #000;
+				transition: all 0.6s;
+			}
+		}
+	}
+}
+.img-formate {
+	p {
+		font-size: variables.$font-size-14;
+		margin: 0px;
+        @include mixins.respond-below(sm) {
+            margin-top: 10px;
+        }
+	}
+}
+.upload-remove-btns {
+	display: flex;
+	align-items: center;
+	margin-bottom: 6px;
+    @include mixins.respond-below(sm) {
+		display: block;
+	}
+	.drag-upload {
+		border: 0;
+		margin-bottom: 0;
+		border-radius: 10px;
+		.img-upload {
+			padding: 8px 6px;
+			background: variables.$dark;
+			color: variables.$white;
+			border-radius: 5px;
+			p {
+				font-size: variables.$font-size-12;
+				font-weight: variables.$font-weight-medium;
+				color: variables.$white;
+				line-height: normal;
+                @include mixins.respond-below(sm) {
+                    margin-top: 0;
+                }
+			}
+		}
+	}
+}
+.img-remove-btn {
+	a {
+		padding: 11px 15px;
+		color: variables.$primary;
+		background: #FFF1E7;
+		border-radius: 10px;
+		margin-left: 15px;
+		display: inline-block;
+        @include mixins.respond-below(sm) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+            text-align: center;
+        }
+	}
+}
+.settings-card-footer {
+	margin-top: 24px;
+	text-align: end;
+	.btn {
+		padding: 6px 12px;
+		font-weight: variables.$font-weight-medium;
+		font-size: variables.$font-size-13;
+		&:hover {
+			background-color: #000;
+			color: variables.$white;
+			transition: all 0.7s;
+		}
+	}
+}
+::placeholder {
+	color: variables.$gray-500;
+}
+.changed-info {
+	font-size: variables.$font-size-16;
+	color: #363636;
+	margin-bottom: 15px;
+}
+.status-toggle {
+	.check {
+		display: block;
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		&:checked {
+			+ {
+				.checktoggle {
+					background: variables.$success;
+					&:after {
+						right: 0;
+						width: 10px;
+						height: 10px;
+						left: 100%;
+						transform: translate(calc(-100% - 3px), -50%);
+					}
+				}
+			}
+		}
+	}
+	.checktoggle {
+		background: variables.$gray-100;
+		cursor: pointer;
+		display: block;
+		font-size: 0;
+		margin-bottom: 0;
+		position: relative;
+		border-radius: 12px;
+		width: 30px;
+		height: 14px;
+		&:after {
+			content: " ";
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-color: variables.$white;
+			-webkit-transition: all 0.2s ease;
+			-ms-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+			transform: translate(3px, -50%);
+			-webkit-transform: translate(3px, -50%);
+			-ms-transform: translate(3px, -50%);
+			position: absolute;
+			top: 50%;
+			left: 0;
+			border-radius: 50%;
+		}
+	}
+}
+.payment-btn {
+	border-bottom: 1px solid #4F4F4F;
+}
+.payment-method-edit {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.card-type {
+		display: flex;
+		align-items: center;
+		.payment-card-img {
+			width: 40px;
+			height: 40px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			background: variables.$light;
+			margin-right: 5px;
+		}
+	}
+}
+.plan-bill-table {
+	.col-sm-12 {
+		padding-right: 0;
+	}
+}
+.table-card {
+	border: 1px solid variables.$gray-100;
+	border-radius: 10px;
+	padding: 14px 15px 25px 24px;
+	margin-bottom: 24px;
+	td {
+		border: 0;
+		padding: 10px;
+	}
+	th {
+		padding: 10px;
+		h6 {
+			margin-bottom: 0;
+		}
+		h4 {
+			margin-bottom: 0;
+		}
+	}
+	.table {
+		tbody {
+			td {
+				font-weight: variables.$font-weight-semibold;
+				font-size: variables.$font-size-16;
+				color: #4F4F4F;
+				padding: 10px;
+			}
+		}
+		th {
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		tr {
+			td {
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	thead {
+		th {
+			&:first-child {
+				width: 70%;
+			}
+		}
+	}
+}
+.table-card.integrated-table {
+	padding-bottom: 14px;
+}
+.integrated-table {
+	th {
+		font-size: variables.$font-size-20;
+		font-weight: variables.$font-weight-semibold;
+		color: variables.$gray-900;
+		background: variables.$light-800;
+	}
+	.table {
+		.custom-first-row {
+			td {
+				padding-top: 15px;
+			}
+		}
+	}
+}
+.noti-setting-table {
+	th {
+		font-size: variables.$font-size-16;
+		font-weight: variables.$font-weight-semibold;
+		color: variables.$gray-900;
+		background: variables.$light-800;
+		&:first-child {
+			font-size: variables.$font-size-18;
+		}
+	}
+}
+.custom-setting-table {
+	border: 1px solid variables.$gray-100;
+	border-radius: 10px;
+	padding: 0px 0px 10px 0px;
+	margin-bottom: 24px;
+	.table {
+		th {
+			&:first-child {
+				padding-left: 20px;
+			}
+		}
+		tr {
+			td {
+				&:first-child {
+					padding-left: 20px !important;
+				}
+			}
+		}
+	}
+	td {
+		font-weight: 400 !important;
+		font-size: variables.$font-size-14 !important;
+		padding: 12px !important;
+	}
+}
+.integration-icon {
+	border: 1px solid variables.$gray-100;
+	width: 100px;
+	height: 50px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.badge.bg-soft-secondary {
+	background: #F1F1F1;
+	color: variables.$gray-900;
+}
+.integration-name {
+	h6 {
+		margin: 0 0 0 15px;
+		font-weight: variables.$font-weight-medium;
+		font-size: variables.$font-size-14;
+		color: variables.$gray-900;
+	}
+}
+.badge.bg-soft-danger {
+	background: #FCF2F5;
+	color: #E82646;
+}
+.settings-modal {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	&:hover {
+		background: variables.$light;
+	}
+}
+.testimonial-section {
+	padding: 60px 0 60px !important;
+}
+.date-info {
+	.form-control {
+		padding: 6px 12px 6px 27px !important;
+		color: variables.$gray-500 !important; 
+        width: 118px;
+	}
+}

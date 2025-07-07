@@ -1,0 +1,58 @@
+/****** Utils ******/
+@use "utils/variables";
+@use "utils/mixins";
+
+/******* Base *******/
+@use "base/base";
+
+/******* Components ******/
+@use "components/avatar";
+@use "components/boostrap";
+@use "components/button";
+@use "components/loader";
+@use "components/table";
+@use "components/cursor";
+@use "components/font";
+@use "components/typography";
+@use "components/navs-tabs";
+
+/****** Layout ******/
+@use "layout/common";
+@use "layout/content";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/sidebar";
+@use "layout/notification";
+@use "layout/theme";
+
+/******* Vendors ******/
+@use "vendors/select2";
+@use "vendors/datatables";
+@use "vendors/rangepicker-plugin";
+
+/******* Pages ******/
+@use "pages/home";
+@use "pages/home-2";
+@use "pages/search";
+@use "pages/service-details";
+@use "pages/dashboard";
+@use "pages/blogs";
+@use "pages/portfolio";
+@use "pages/settings";
+@use "pages/price";
+@use "pages/profile";
+@use "pages/login";
+@use "pages/chat";
+@use "pages/seller";
+@use "pages/privacy-policy";
+@use "pages/category";
+@use "pages/coming-soon";
+@use "pages/about";
+@use "pages/contact";
+@use "pages/team";
+
+
+
+
+
+

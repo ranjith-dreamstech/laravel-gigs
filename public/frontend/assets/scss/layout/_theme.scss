@@ -1,0 +1,116 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+[data-theme="dark"] {    
+    .sidebar {
+        .sidebar-logo {
+            .logo-normal {
+                display: none;
+            }
+            .dark-logo {
+                display: block;
+            }
+        }
+    }
+    .user-review {
+        .review-lists {
+            .review-wrap {
+                box-shadow: none;
+            }
+        }
+    }
+    .expand-menu{
+        &.mini-sidebar {
+            .sidebar {
+                .sidebar-logo {
+                    .logo {
+                        @include mixins.respond-above(lg) {
+                            display: none;
+                        }
+                    }
+                    .dark-logo {
+                        @include mixins.respond-above(lg) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mini-sidebar {
+        .sidebar {
+            .sidebar-logo {
+                .dark-logo {
+                    @include mixins.respond-above(lg) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .category-icon, .popular-icon, .provide-box .provide-icon, .client-logo  {
+        img {
+            filter: brightness(0) saturate(100%);
+        }
+    }
+    .banner-head  {
+        h1 {
+            color: variables.$darkmode-gray-900;
+        }
+    }
+    .popular-search {
+        h5 {
+            color: variables.$darkmode-gray-900;
+        }
+    }
+    .hero-section-two h1, .provide-section .section-header h2, .cta-wrap h3 {
+        color: variables.$darkmode-gray-900;
+    }
+    .trusted-customers .section-header {
+        h2, p {
+            color: variables.$darkmode-dark;
+        }
+    }
+    .testimonial-section {
+        .section-header {
+            h2 {
+                color: variables.$darkmode-gray-900;
+            }
+        }
+    }
+    .cta-wrap .badge {
+        color: variables.$darkmode-gray-900;
+    }
+    .navbar-brand {
+        &.logo {
+            display: none;
+        }
+    }
+    .navbar-header {
+        .dark-logo {
+            display: block;
+        }
+    }
+    .menu-logo {
+        display: none;
+        &.dark-logo {
+            display: block;
+        }
+    }
+    .footer {
+        .footer-logo {
+            display: none;
+        }
+        .footer-dark-logo {
+            display: block;
+        }
+    }
+    .footer-bottom-two {
+        .footer-logo {
+            display: none;
+        }
+        .footer-dark-logo {
+            display: block;
+        }
+    }
+}

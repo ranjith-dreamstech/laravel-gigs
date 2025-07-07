@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/gigs",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Gigs\\": "app/",
+            "Modules\\Gigs\\Database\\Factories\\": "database/factories/",
+            "Modules\\Gigs\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Gigs\\Tests\\": "tests/"
+        }
+    }
+}

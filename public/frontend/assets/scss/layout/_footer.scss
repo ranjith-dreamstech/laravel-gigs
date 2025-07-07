@@ -1,0 +1,228 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.footer {
+	background: variables.$dark;
+	padding: 40px 0 0;
+	position: relative;
+	z-index: 1;
+}
+.footer-bg-one {
+	position: absolute;
+	left: 20px;
+	bottom: 100px;
+	z-index: -1;
+}
+.footer-bg-two {
+	position: absolute;
+	right: 0;
+	bottom: 50px;
+	max-width: 220px;
+	z-index: -1;
+}
+.footer-widget {
+	margin-bottom: 20px;
+	img {
+		margin-bottom: 20px;
+	}
+	h3 {
+		font-size: variables.$font-size-20;
+		color: variables.$white;
+		margin-bottom: 24px;
+	}
+	p {
+		color: variables.$gray-100;
+		margin-bottom: 20px;
+	}
+	.menu-items {
+		li {
+			margin-bottom: 10px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			padding-left: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&::before {
+				content: "";
+				width: 4px;
+				height: 4px;
+				border-radius: 10px;
+				background: variables.$light;
+				position: absolute;
+				left: 0;
+			}
+			a {
+				font-size: variables.$font-size-16;
+				color: variables.$light;
+                @include mixins.respond-below(xxl) {
+                    font-size: variables.$font-size-15;
+                }
+				&:hover {
+					color: variables.$primary;
+				}
+			}
+		}
+	}
+}
+.social-links {
+	ul {
+		display: flex;
+		align-items: center;
+		li {
+			margin-right: 15px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				width: 36px;
+				height: 36px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: variables.$white;
+				background: variables.$gray-900;
+				transition: 0.5s all;
+				&:hover {
+					background: variables.$primary;
+					transition: 0.5s all;
+					color: variables.$white;
+				}
+				i {
+					font-size: variables.$font-size-16;
+				}
+			}
+		}
+	}
+}
+.location-list {
+	li {
+		h6 {
+			font-size: variables.$font-size-14;
+			font-weight: variables.$font-weight-medium;
+			color: variables.$white;
+			margin-bottom: 4px;
+		}
+		span {
+			width: 46px;
+			height: 46px;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: variables.$white;
+			background: variables.$gray-900;
+			flex-shrink: 0;
+			margin-right: 8px;
+		}
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		margin: 0 24px 15px 0;
+		p {
+			color: variables.$white;
+			margin-bottom: 0;
+			font-size: variables.$font-size-16;
+		}
+	}
+}
+.breadcrumb-social {
+	color: variables.$gray-900 !important;
+	li {
+		margin-right: 8px !important;
+		a {
+			width: 30px !important;
+			height: 30px !important;
+			i {
+				font-size: variables.$font-size-13 !important;
+			}
+		}
+	}
+}
+.contact-widget {
+	border-top: 1px solid variables.$gray-800;
+	padding: 40px 0 25px;
+	margin-top: 20px;
+    @include mixins.respond-below(lg) {
+		padding: 30px 0;
+	}
+    @include mixins.respond-below(md) {
+		padding: 20px 0;
+		margin-top: 0;
+	}
+}
+.paypal-icons {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	margin-bottom: 15px;
+	gap: 6px;
+    @include mixins.respond-below(xl) {
+        margin-bottom: 0;
+    }
+}
+.footer-bottom {
+	border-top: 1px solid variables.$gray-900;
+	padding: 20px 0;
+}
+.footer-bottom-links {
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+        @include mixins.respond-below(lg) {
+            justify-content: center;
+            margin-top: 20px;
+        }
+        @include mixins.respond-below(sm) {
+            flex-direction: column;
+        }
+		li {
+			margin-right: 30px;
+            @include mixins.respond-below(sm) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+			a {
+				font-size: variables.$font-size-16;
+				color: variables.$white;
+				&:hover {
+					color: variables.$primary;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+                @include mixins.respond-below(sm) {
+                    margin-bottom: 0;
+                }
+			}
+		}
+	}
+}
+.copy-right {
+	p {
+		color: variables.$white;
+		margin-bottom: 0;
+        @include mixins.respond-below(lg) {
+            text-align: center;
+        }
+	}
+}
+.footer {
+	.footer-dark-logo {
+		display: none;
+	}
+}
+.footer-bottom-two {
+	.footer-dark-logo {
+		display: none;
+	}
+}

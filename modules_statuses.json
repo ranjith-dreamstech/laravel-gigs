@@ -1,0 +1,12 @@
+{
+    "Communication": true,
+    "GeneralSetting": true,
+    "Booking": true,
+    "Page": true,
+    "MenuManagement": true,
+    "RolesPermission": true,
+    "Category": true,
+    "Finance": true,
+    "Gigs": true,
+    "Installer": false
+}

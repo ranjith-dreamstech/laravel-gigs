@@ -1,0 +1,239 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.price-section {
+	padding: 80px 0 56px;
+    @include mixins.respond-below(lg) {
+		padding: 60px 0 36px;
+	}
+    @include mixins.respond-below(md) {
+		padding: 40px 0 16px;
+	}
+}
+.pricing-tab {
+	text-align: center;
+	ul {
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		justify-content: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		box-shadow: 0px 4px 9px -1px #13102208, 0px 4.4px 20px -1px #1310220D;
+		border-radius: 50px;
+		margin-bottom: 24px;
+		padding: 4px;
+		border: 1px solid variables.$gray-100;
+		li {
+			display: inline-block;
+			a {
+				font-weight: variables.$font-weight-semibold;
+				background: variables.$white;
+				border-radius: 50px;
+				padding: 4px 12px;
+				display: inline-block;
+				margin-right: 10px;
+			}
+			&:last-child {
+				a {
+					margin-right: 0;
+				}
+			}
+			a.active {
+				background: variables.$primary;
+				color: variables.$white;
+				padding: 4px 12px;
+			}
+		}
+	}
+}
+.price-card {
+	box-shadow: 0px 4px 9px -1px #13102208, 0px 4.4px 20px -1px #1310220D;
+	border: 1px solid variables.$gray-100;
+	border-radius: 10px;
+	padding: 24px;
+	margin-bottom: 24px;
+	-webkit-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	&:hover {
+		border-top: 2px solid variables.$success;
+		box-shadow: 0px 4px 9px -1px #13102208;
+		box-shadow: 0px 4.4px 20px -1px #1310220D;
+		-webkit-transition: 0.5s;
+		-ms-transition: 0.5s;
+		transition: 0.5s;
+		.price-btn {
+			a {
+				background: variables.$primary;
+				color: variables.$white;
+			}
+		}
+	}
+	.price-title {
+		margin-bottom: 10px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: space-between;
+		h3 {
+			padding-bottom: 15px;
+			margin: 0 10px 5px 0;
+			position: relative;
+		}
+		h2 {
+			margin-bottom: 2px;
+		}
+		p {
+			margin-bottom: 5px;
+			color: variables.$gray-900;
+			text-align: right;
+		}
+	}
+	.plan-type {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: start;
+		flex-wrap: wrap;
+		.badge {
+			background: variables.$success;
+			color: variables.$white;
+			display: inline-block;
+			padding: 2px 8px;
+			border-radius: 5px;
+			font-size: variables.$font-size-12;
+			font-weight: variables.$font-weight-medium;
+		}
+	}
+	.price-features {
+		ul {
+			margin-bottom: 25px;
+			li {
+				margin-bottom: 14px;
+				position: relative;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				i {
+					color: variables.$gray-500;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				span {
+					margin-right: 5px;
+				}
+			}
+			li.inactive {
+				i {
+					color: #E82646;
+				}
+			}
+		}
+	}
+	.price-btn {
+		a {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			padding: 14px 18px;
+			border: 1px solid variables.$gray-100;
+			background: variables.$white;
+			color: variables.$dark;
+            @include mixins.respond-below(lg) {
+                padding: 10px 14px;
+            }
+			i {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+.price-card.active {
+	border-top: 2px solid variables.$success;
+	box-shadow: 0px 4px 9px -1px #13102208;
+	box-shadow: 0px 4.4px 20px -1px #1310220D;
+	-webkit-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	.price-btn {
+		a {
+			background: variables.$primary;
+			color: variables.$white;
+		}
+	}
+}
+.price-features {
+	h6 {
+		margin-bottom: 15px;
+	}
+}
+.card-bottom {
+	margin-bottom: 0;
+    @include mixins.respond-below(lg) {
+        margin-bottom: 24px;
+    }
+}
+.bg-primary-transparent {
+	background-color: #F8F5FF;
+	color: #7539FF;
+}
+.bg-success-transparent {
+	background-color: variables.$success-transparent;
+	color: variables.$success;
+}
+.bg-warning-transparent {
+	background-color: variables.$warning-transparent;
+	color: #E2B93B;
+}
+.bg-danger-transparent {
+	background-color: variables.$danger-transparent;
+	color: variables.$danger;
+}
+.bg-info-transparent {
+	background-color: variables.$indigo-transparent;
+}
+.bg-error-transparent {
+	background-color: variables.$danger-transparent;
+}
+.card {
+	border-radius: 5px;
+	border-color: variables.$gray-100;
+}
+.card-body {
+	color: variables.$gray-500;
+}
+.status-info {
+	.card {
+		h6 {
+			font-size: variables.$font-size-20;
+		}
+	}
+	.status-icon {
+		width: 40px;
+		font-size: variables.$font-size-24;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		border-radius: 5px;
+		flex-shrink: 0;
+	}
+}
+.apexcharts-legend{
+	display: none !important;
+}
+.revenue i{
+  color: variables.$primary-900;
+}

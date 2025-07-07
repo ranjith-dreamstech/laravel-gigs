@@ -1,0 +1,269 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.nav-tabs {
+	border-bottom: 1px solid variables.$border-color;
+	margin-bottom: 40px;
+	>li {
+		>a {
+			margin-right: 0;
+			color: #888;
+			border-radius: 0;
+			&:hover {
+				border-color: transparent;
+				color: #272b41;
+			}
+			&:focus {
+				border-color: transparent;
+				color: #272b41;
+			}
+		}
+	}
+	.nav-link {
+		border-radius: 0;
+		&:focus {
+			background-color: #eee;
+			border-color: transparent;
+			color: #272b41;
+		}
+		&:hover {
+			background-color: #eee;
+			border-color: transparent;
+			color: #272b41;
+		}
+	}
+}
+.nav-tabs.nav-tabs-solid {
+	>li {
+		>a {
+			color: #272b41;
+			color: #272b41;
+			border-color: transparent;
+			&:hover {
+				background-color: #dcdcdc;
+			}
+			&:focus {
+				background-color: #dcdcdc;
+			}
+		}
+		>a.active {
+			background-color: variables.$primary;
+			border-color: variables.$primary;
+			color: variables.$white;
+			&:hover {
+				background-color: variables.$primary;
+				border-color: variables.$primary;
+				color: variables.$white;
+			}
+			&:focus {
+				background-color: variables.$primary;
+				border-color: variables.$primary;
+				color: variables.$white;
+			}
+		}
+		margin-bottom: 0;
+	}
+	>.active {
+		>a {
+			background-color: variables.$primary;
+			border-color: variables.$primary;
+			color: variables.$white;
+			&:hover {
+				background-color: variables.$primary;
+				border-color: variables.$primary;
+				color: variables.$white;
+			}
+			&:focus {
+				background-color: variables.$primary;
+				border-color: variables.$primary;
+				color: variables.$white;
+			}
+		}
+	}
+	background-color: #fafafa;
+	border: 0;
+	>.open {
+		&:not(.active) {
+			>a {
+				background-color: #dcdcdc;
+				border-color: transparent;
+			}
+		}
+	}
+}
+.tab-content {
+	padding-top: 0;
+}
+.nav-link {
+	&:focus {
+		color: variables.$primary;
+	}
+	&:hover {
+		color: variables.$primary;
+	}
+}
+.nav-tabs.nav-justified {
+	>li {
+		>a {
+			border-radius: 0;
+			margin-bottom: 0;
+			&:hover {
+				border-bottom-color: #ddd;
+			}
+			&:focus {
+				border-bottom-color: #ddd;
+			}
+		}
+	}
+}
+.nav-tabs.nav-justified.nav-tabs-solid {
+	>li {
+		>a {
+			border-color: transparent;
+		}
+	}
+}
+.nav-tabs.nav-tabs-solid.nav-tabs-rounded {
+	border-radius: 50px;
+	a {
+		@include mixins.respond-below(lg) {
+			margin-bottom: 24px;
+		}
+	}
+	>li {
+		>a {
+			border-radius: 50px;
+		}
+		>a.active {
+			border-radius: 50px;
+			&:hover {
+				border-radius: 50px;
+			}
+			&:focus {
+				border-radius: 50px;
+			}
+		}
+	}
+}
+.nav-tabs-justified {
+	>li {
+		>a {
+			border-radius: 0;
+			margin-bottom: 0;
+			&:hover {
+				border-bottom-color: #ddd;
+			}
+			&:focus {
+				border-bottom-color: #ddd;
+			}
+		}
+	}
+}
+.nav-tabs-justified.nav-tabs-solid {
+	>li {
+		>a {
+			border-color: transparent;
+		}
+	}
+}
+.nav-tabs.nav-justified.nav-tabs-top {
+	border-bottom: 1px solid #ddd;
+	>li {
+		>a {
+			border-width: 2px 0 0 0;
+			&:hover {
+				border-width: 2px 0 0 0;
+			}
+			&:focus {
+				border-width: 2px 0 0 0;
+			}
+		}
+	}
+}
+.nav-tabs.nav-tabs-top {
+	>li {
+		margin-bottom: 0;
+		>a {
+			border-width: 2px 0 0 0;
+			&:hover {
+				border-width: 2px 0 0 0;
+				border-top-color: #ddd;
+			}
+			&:focus {
+				border-width: 2px 0 0 0;
+				border-top-color: #ddd;
+			}
+		}
+		>a.active {
+			border-top-color: variables.$primary;
+			&:hover {
+				border-top-color: variables.$primary;
+			}
+			&:focus {
+				border-top-color: variables.$primary;
+			}
+		}
+	}
+	>li.open {
+		>a {
+			border-top-color: #ddd;
+		}
+	}
+	>li+li {
+		>a {
+			margin-left: 1px;
+		}
+	}
+}
+.nav-tabs.nav-tabs-bottom {
+	>li {
+		>a.active {
+			border-bottom-width: 2px;
+			border-color: transparent;
+			border-bottom-color: variables.$primary;
+			background-color: transparent;
+			transition: none 0s ease 0s;
+			-moz-transition: none 0s ease 0s;
+			-o-transition: none 0s ease 0s;
+			-ms-transition: none 0s ease 0s;
+			-webkit-transition: none 0s ease 0s;
+			color: variables.$gray-900;
+			&:hover {
+				border-bottom-width: 2px;
+				border-color: transparent;
+				border-bottom-color: variables.$primary;
+				background-color: transparent;
+				transition: none 0s ease 0s;
+				-moz-transition: none 0s ease 0s;
+				-o-transition: none 0s ease 0s;
+				-ms-transition: none 0s ease 0s;
+				-webkit-transition: none 0s ease 0s;
+			}
+			&:focus {
+				border-bottom-width: 2px;
+				border-color: transparent;
+				border-bottom-color: variables.$primary;
+				background-color: transparent;
+				transition: none 0s ease 0s;
+				-moz-transition: none 0s ease 0s;
+				-o-transition: none 0s ease 0s;
+				-ms-transition: none 0s ease 0s;
+				-webkit-transition: none 0s ease 0s;
+			}
+		}
+	}
+}
+.nav-tabs-justified.nav-tabs-top {
+	border-bottom: 1px solid #ddd;
+	>li {
+		>a {
+			border-width: 2px 0 0 0;
+			&:hover {
+				border-width: 2px 0 0 0;
+			}
+			&:focus {
+				border-width: 2px 0 0 0;
+			}
+		}
+	}
+}

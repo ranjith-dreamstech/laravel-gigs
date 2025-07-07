@@ -1,0 +1,702 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.btn.btn-lg {
+	font-size: variables.$font-size-14;
+	padding: 8px 16px;
+}
+.btn.btn-md {
+	font-size: variables.$font-size-13;
+	padding: 6px 12px;
+	font-weight: variables.$font-weight-medium;
+}
+.btn.focus {
+	box-shadow: none;
+}
+.btn {
+	&:focus {
+		box-shadow: none;
+	}
+}
+.btn.btn-white {
+	background: variables.$white;
+	border: 1px solid variables.$white;
+	color: variables.$gray-900;
+	box-shadow: inset 0 0 0 variables.$primary;
+	border-radius: 5px;
+	font-weight: variables.$font-weight-medium;
+	font-size: variables.$font-size-14;
+	padding: 6px 12px;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.btn-primary {
+	background: variables.$primary;
+	border-radius: 5px;
+	border: 1px solid variables.$primary;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	padding: 8px 18px;
+	color: variables.$white;
+	font-weight: variables.$font-weight-medium;
+	font-size: variables.$font-size-14;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 12px;
+	&:hover {
+		background-color: #f7660e;
+		border: 1px solid #f7660e;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:active {
+		background-color: #f7660e;
+		border: 1px solid #f7660e;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:focus {
+			background-color: #FF7A00;
+			border: 1px solid #FF7A00;
+			box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+			color: variables.$white !important;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+			&:not(:disabled) {
+				&:not(.disabled) {
+					box-shadow: unset;
+				}
+			}
+		}
+		&:hover {
+			background-color: #FF7A00;
+			border: 1px solid #FF7A00;
+			box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+			color: variables.$white !important;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+		&:not(:disabled) {
+			&:not(.disabled) {
+				background-color: variables.$primary;
+				border: 1px solid variables.$primary;
+				box-shadow: inset 70px 0 0 0 variables.$primary;
+				color: variables.$white;
+				-webkit-transition: all 0.7s;
+				-moz-transition: all 0.7s;
+				-o-transition: all 0.7s;
+				transition: all 0.7s;
+			}
+		}
+	}
+	&:focus {
+		background-color: #FF7A00;
+		border: 1px solid #FF7A00;
+		box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+		color: variables.$white !important;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:disabled {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 70px 0 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.btn-primary.active {
+	background-color: #f7660e;
+	border: 1px solid #f7660e;
+	color: variables.$white;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	&:focus {
+		background-color: #FF7A00;
+		border: 1px solid #FF7A00;
+		box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+		color: variables.$white !important;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:not(:disabled) {
+			&:not(.disabled) {
+				box-shadow: unset;
+			}
+		}
+	}
+	&:hover {
+		background-color: #FF7A00;
+		border: 1px solid #FF7A00;
+		box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+		color: variables.$white !important;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:not(:disabled) {
+		&:not(.disabled) {
+			background-color: variables.$primary;
+			border: 1px solid variables.$primary;
+			box-shadow: inset 70px 0 0 0 variables.$primary;
+			color: variables.$white;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+	}
+}
+.open {
+	>.dropdown-toggle.btn-primary {
+		background-color: #f7660e;
+		border: 1px solid #f7660e;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:focus {
+			background-color: #FF7A00;
+			border: 1px solid #FF7A00;
+			box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+			color: variables.$white !important;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+		&:hover {
+			background-color: #FF7A00;
+			border: 1px solid #FF7A00;
+			box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+			color: variables.$white !important;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+	}
+	>.dropdown-toggle.btn-primary.focus {
+		background-color: #FF7A00;
+		border: 1px solid #FF7A00;
+		box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+		color: variables.$white !important;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	>.dropdown-toggle.btn-outline-primary.focus {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	>.dropdown-toggle.btn-outline-primary {
+		&:focus {
+			background-color: variables.$primary;
+			border: 1px solid variables.$primary;
+			box-shadow: inset 0 70px 0 0 variables.$primary;
+			color: variables.$white;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+		&:hover {
+			background-color: variables.$primary;
+			border: 1px solid variables.$primary;
+			box-shadow: inset 0 70px 0 0 variables.$primary;
+			color: variables.$white;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+	}
+	>.dropdown-toggle.btn-secondary {
+		background-color: rgba(255, 212, 182, 1);
+		border: 1px solid rgba(255, 212, 182, 1);
+		color: rgba(255, 105, 0, 1);
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:focus {
+			background-color: variables.$white;
+			border: 1px solid variables.$gray-900;
+			box-shadow: inset 70px 0 0 0 variables.$white;
+			color: variables.$gray-900;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+		&:hover {
+			background-color: variables.$white;
+			border: 1px solid variables.$gray-900;
+			box-shadow: inset 70px 0 0 0 variables.$white;
+			color: variables.$gray-900;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+	}
+	>.dropdown-toggle.btn-secondary.focus {
+		background-color: variables.$white;
+		border: 1px solid variables.$gray-900;
+		box-shadow: inset 70px 0 0 0 variables.$white;
+		color: variables.$gray-900;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.btn-primary.active.focus {
+	background-color: #FF7A00;
+	border: 1px solid #FF7A00;
+	box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+	color: variables.$white !important;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.btn-primary.focus {
+	&:active {
+		background-color: #FF7A00;
+		border: 1px solid #FF7A00;
+		box-shadow: inset 0 70px 0 0 rgba(255, 122, 0, 1);
+		color: variables.$white !important;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.show {
+	>.btn-primary.dropdown-toggle {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 70px 0 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:focus {
+			box-shadow: unset;
+		}
+	}
+	>.btn-secondary.dropdown-toggle {
+		background-color: variables.$gray-900;
+		border-color: variables.$gray-900;
+		color: variables.$white;
+		background-color: #FFF1E7;
+		border-color: #FFF1E7;
+		color: variables.$primary;
+		&:focus {
+			box-shadow: unset;
+			box-shadow: unset;
+		}
+	}
+}
+.btn-primary.disabled {
+	background-color: variables.$primary;
+	border: 1px solid variables.$primary;
+	box-shadow: inset 70px 0 0 0 variables.$primary;
+	color: variables.$white;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.btn-outline-primary {
+	background-color: variables.$white;
+	border: 1px solid variables.$primary;
+	color: variables.$primary;
+	box-shadow: inset 0 0 0 variables.$white;
+	border-radius: 5px;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	&:hover {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:focus {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:active {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:focus {
+			background-color: variables.$primary;
+			border: 1px solid variables.$primary;
+			box-shadow: inset 0 70px 0 0 variables.$primary;
+			color: variables.$white;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+		&:hover {
+			background-color: variables.$primary;
+			border: 1px solid variables.$primary;
+			box-shadow: inset 0 70px 0 0 variables.$primary;
+			color: variables.$white;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+	}
+}
+.btn-outline-primary.active {
+	background-color: variables.$primary;
+	border: 1px solid variables.$primary;
+	box-shadow: inset 0 70px 0 0 variables.$primary;
+	color: variables.$white;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	&:focus {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:hover {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.btn-outline-primary.active.focus {
+	background-color: variables.$primary;
+	border: 1px solid variables.$primary;
+	box-shadow: inset 0 70px 0 0 variables.$primary;
+	color: variables.$white;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.btn-outline-primary.focus {
+	&:active {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.btn-secondary-one {
+	border-radius: 5px;
+	border: 2px solid var(--black-10, variables.$white);
+	background: rgba(255, 255, 255, 0.15);
+	text-transform: capitalize;
+	color: variables.$white;
+	font-weight: variables.$font-weight-semibold;
+	font-size: variables.$font-size-16;
+	padding: 10px 20px;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	&:hover {
+		background-color: variables.$white;
+		border: 2px solid variables.$gray-900;
+		color: variables.$gray-900;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.btn.btn-sm {
+	padding: 2px 7px;
+	font-size: variables.$font-size-13;
+	border-radius: 5px;
+}
+.btn-secondary {
+	background: variables.$secondary;
+	border: 1px solid variables.$secondary;
+	border-radius: 5px;
+	color: variables.$white;
+	font-weight: variables.$font-weight-medium;
+	font-size: variables.$font-size-16;
+	padding: 10px 20px;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	display: inline-flex;
+	align-items: center;
+  @include mixins.respond-below(xl) {
+    padding: 10px 15px;
+  }
+	&:hover {
+		background-color: rgba(255, 212, 182, 1);
+		border: 1px solid rgba(255, 212, 182, 1);
+		color: rgba(255, 105, 0, 1);
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:focus {
+		background-color: rgba(255, 212, 182, 1);
+		border: 1px solid rgba(255, 212, 182, 1);
+		color: rgba(255, 105, 0, 1);
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:active {
+		background-color: rgba(255, 212, 182, 1);
+		border: 1px solid rgba(255, 212, 182, 1);
+		color: rgba(255, 105, 0, 1);
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:focus {
+			background-color: variables.$white;
+			border: 1px solid variables.$gray-900;
+			box-shadow: inset 70px 0 0 0 variables.$white;
+			color: variables.$gray-900;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+			&:not(:disabled) {
+				&:not(.disabled) {
+					box-shadow: unset;
+					box-shadow: unset;
+				}
+			}
+		}
+		&:hover {
+			background-color: variables.$white;
+			border: 1px solid variables.$gray-900;
+			box-shadow: inset 70px 0 0 0 variables.$white;
+			color: variables.$gray-900;
+			-webkit-transition: all 0.7s;
+			-moz-transition: all 0.7s;
+			-o-transition: all 0.7s;
+			transition: all 0.7s;
+		}
+		&:not(:disabled) {
+			&:not(.disabled) {
+				background-color: variables.$gray-900;
+				border-color: variables.$gray-900;
+				color: variables.$white;
+				background-color: #FFF1E7;
+				border-color: #FFF1E7;
+				color: variables.$primary;
+			}
+		}
+	}
+	&:disabled {
+		background-color: variables.$gray-900;
+		border-color: variables.$gray-900;
+		color: variables.$white;
+		background-color: #FFF1E7;
+		border-color: #FFF1E7;
+		color: variables.$primary;
+	}
+}
+.btn-secondary.active {
+	background-color: rgba(255, 212, 182, 1);
+	border: 1px solid rgba(255, 212, 182, 1);
+	color: rgba(255, 105, 0, 1);
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	&:focus {
+		background-color: variables.$white;
+		border: 1px solid variables.$gray-900;
+		box-shadow: inset 70px 0 0 0 variables.$white;
+		color: variables.$gray-900;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+		&:not(:disabled) {
+			&:not(.disabled) {
+				box-shadow: unset;
+				box-shadow: unset;
+			}
+		}
+	}
+	&:hover {
+		background-color: variables.$white;
+		border: 1px solid variables.$gray-900;
+		box-shadow: inset 70px 0 0 0 variables.$white;
+		color: variables.$gray-900;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+	&:not(:disabled) {
+		&:not(.disabled) {
+			background-color: variables.$gray-900;
+			border-color: variables.$gray-900;
+			color: variables.$white;
+			background-color: #FFF1E7;
+			border-color: #FFF1E7;
+			color: variables.$primary;
+		}
+	}
+}
+.btn-secondary.active.focus {
+	background-color: variables.$white;
+	border: 1px solid variables.$gray-900;
+	box-shadow: inset 70px 0 0 0 variables.$white;
+	color: variables.$gray-900;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.btn-secondary.focus {
+	&:active {
+		background-color: variables.$white;
+		border: 1px solid variables.$gray-900;
+		box-shadow: inset 70px 0 0 0 variables.$white;
+		color: variables.$gray-900;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.btn-secondary.disabled {
+	background-color: variables.$gray-900;
+	border-color: variables.$gray-900;
+	color: variables.$white;
+	background-color: #FFF1E7;
+	border-color: #FFF1E7;
+	color: variables.$primary;
+}
+.btn-secondary-outline {
+	background: #F7F7FF;
+	border: 1px solid variables.$primary;
+	color: variables.$primary;
+	border-radius: 4px;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	&:hover {
+		background-color: variables.$primary;
+		border: 1px solid variables.$primary;
+		box-shadow: inset 0 70px 0 0 variables.$primary;
+		color: variables.$white;
+		-webkit-transition: all 0.7s;
+		-moz-transition: all 0.7s;
+		-o-transition: all 0.7s;
+		transition: all 0.7s;
+	}
+}
+.btn-light {
+	color: variables.$gray-900;
+	background-color: variables.$light;
+}
+.btn-dark {
+	background-color: variables.$dark !important;
+	color: variables.$white;
+	&:hover {
+		background-color: variables.$gray-900 !important;
+	}
+}
+.btn-danger {
+	background: #E82646;
+	border-radius: 5px;
+	border: 1px solid #E82646;
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+	padding: 8px 15px;
+	color: variables.$white;
+	font-weight: variables.$font-weight-semibold;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Gigs",
+    "alias": "gigs",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Gigs\\Providers\\GigsServiceProvider"
+    ],
+    "files": []
+}

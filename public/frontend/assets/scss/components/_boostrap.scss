@@ -1,0 +1,211 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+	background-color: variables.$primary;
+	text-shadow: unset;
+}
+.bootstrap-datetimepicker-widget table {
+	th {
+		font-size: variables.$font-size-14;
+		font-weight: variables.$font-weight-semibold;
+		color: variables.$gray-900;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		&.prev, &.next {
+			padding-bottom: 16px;
+			span {
+				width: 24px;
+				height: 24px;
+				font-size: variables.$font-size-12;
+				border: 1px solid variables.$light-900;
+				@include mixins.rounded(50%);
+				display: -webkit-inline-box;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				align-items: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				justify-content: center;
+				-webkit-justify-content: center;
+				-ms-flex-pack: center;
+				&:hover {
+					background: variables.$dark;
+					border-color: variables.$dark;
+					color: variables.$white;
+				}
+			}
+		}
+	}
+	td {
+		font-size: variables.$font-size-14;
+		color: variables.$gray-500;
+		&.day {
+			width: 30px;
+			height: 32px;
+			line-height: 32px;
+		}
+	}
+} 
+.bootstrap-datetimepicker-widget {
+	z-index: 999 !important;
+	background: variables.$white;
+	.picker-switch {
+		padding-bottom: 16px;
+	}
+}
+.bootstrap-datetimepicker-widget table td.today:before {
+	border-bottom-color: variables.$primary;
+}
+.bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+    background: transparent;
+}
+.container {
+	@include mixins.respond-below(lg) {
+		max-width: 100%;
+	}
+}
+hr {
+    background-color: variables.$border-color;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+label {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	font-weight: variables.$font-weight-medium;
+	color: variables.$gray-900;
+	text-transform: capitalize;
+}
+.form-control {
+	padding: 6px 15px;
+	border-radius: 5px;
+	&::placeholder {
+		color: variables.$gray-500;
+		opacity: 1;
+	}
+	&:focus {
+		border-color: #bbb;
+		box-shadow: none;
+		outline: 0 none;
+		background: variables.$white;
+	}
+}
+.text-body {
+	color: #74788D !important;
+}
+.pagination {
+	>ul {
+		li.arrow {
+			a {
+				background: #f1f1f1;
+				font-size: variables.$font-size-17;
+				margin: 0 9px;
+			}
+		}
+		li.active {
+			a {
+				background: variables.$primary;
+				border-color: variables.$primary;
+				color: variables.$white;
+			}
+		}
+	}
+}
+.personal-card {
+	h6 {
+		font-size: variables.$font-size-13 !important;
+		font-weight: 600 !important;
+	}
+}
+.card {
+	background: variables.$white;
+	border: 1px solid variables.$border-color;
+	border-radius: 10px;
+	margin-bottom: 24px;
+	@include mixins.respond-below(sm) {
+		margin-bottom: 0.9375rem;
+	}
+	.card-header {
+		background-color: transparent;
+		padding: 20px;
+		@include mixins.respond-below(sm) {
+			padding: .75rem 1.25rem;
+		}
+	}
+	.card-body {
+		padding: 20px;
+	}
+}
+.card-title {
+	color: variables.$gray-900;
+}
+.card-footer {
+	@include mixins.respond-below(sm) {
+		padding: .75rem 1.25rem;
+	}
+}
+.card-header {
+	.view-link {
+		color: variables.$gray-500;
+	}
+}
+.table {
+	margin-bottom: 0;
+}
+.bg-info {
+	background-color: variables.$info !important;
+}
+.bg-success {
+	background-color: variables.$success !important;
+	background-color: variables.$success !important;
+}
+.bg-warning {
+	background-color: variables.$warning !important;
+}
+.bg-error {
+	background-color: variables.$danger !important;
+}
+.bg-white {
+	background-color: variables.$white !important;
+}
+.bg-muted {
+	background-color: #1ABE17 !important;
+}
+.bg-pink {
+	background-color: #E82646 !important;
+}
+.bg-light {
+	background: variables.$light !important;
+}
+.text-muted {
+	color: variables.$orange !important;
+}
+.text-error {
+	color: variables.$danger !important;
+}
+.text-success {
+	color: variables.$success !important;
+}
+.text-secondary {
+	color: #1ABE17 !important;
+}
+.text-info {
+	color: variables.$indigo !important;
+}
+.text-grey {
+	color: variables.$gray-500;
+}
+.border {
+	border: 1px solid variables.$border-color !important;
+}
+.border-bottom, .border-top {
+	border-color: variables.$border-color !important;
+}
+.modal-content {
+	background: variables.$white;
+}

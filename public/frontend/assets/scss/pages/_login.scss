@@ -1,0 +1,428 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.login-wrapper {
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	.login-content {
+		width: 100%;
+		height: 100vh;
+		padding: 24px;
+		overflow: auto;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		justify-content: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		flex-wrap: wrap;
+		.login-logo {
+			display: block;
+			max-width: 310px;
+			margin: 0 auto 60px;
+			text-align: center;
+      @include mixins.respond-below(lg) {
+        margin: 0 auto 50px;
+      }
+		}
+	}
+	.login-userset {
+		width: 470px;
+    @include mixins.respond-below(xl) {
+      width: 400px;
+    }
+    @include mixins.respond-below(md) {
+      max-width: 350px;
+	    width:  100%;
+    }
+	}
+}
+.login-heading {
+	text-align: center;
+	margin-bottom: 30px;
+	h3 {
+		font-size: variables.$font-size-24;
+		font-weight: variables.$font-weight-bold;
+		margin-bottom: 5px;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+.form-wrap {
+	position: relative;
+	margin-bottom: 24px;
+}
+.login-card {
+	padding: 24px;
+	border-radius: 10px;
+	border: 1px solid variables.$gray-100;
+	background-color: variables.$white;
+	box-shadow: 0px 4.4px 12px -1px #DEDEDE5C;
+}
+.member-btn {
+	padding: 6px 12px;
+}
+.form-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 15px;
+	.form-control {
+		padding: 10px 30px 10px 15px;
+	}
+}
+.form-focus {
+	.focus-label {
+		font-size: variables.$font-size-14;
+		font-weight: variables.$font-weight-normal;
+		pointer-events: none;
+		position: absolute;
+		-webkit-transform: translate3d(0, -50%, 0) scale(1);
+		-ms-transform: translate3d(0, -50%, 0) scale(1);
+		-o-transform: translate3d(0, -50%, 0) scale(1);
+		transform: translate3d(0, -50%, 0) scale(1);
+		transform-origin: left top;
+		transition: 240ms;
+		left: 15px;
+		top: 50%;
+		z-index: 1;
+		color: #828282;
+		margin-bottom: 0;
+	}
+	.form-control {
+		&:focus {
+			border-color: variables.$primary;
+			~ {
+				.focus-label {
+					opacity: 1;
+					font-weight: variables.$font-weight-normal;
+					top: 0;
+					font-size: variables.$font-size-12;
+					z-index: 1;
+					background-color: variables.$white;
+					color: variables.$primary;
+					padding: 0 5px;
+					left: 11px;
+				}
+			}
+		}
+		&:-webkit-autofill {
+			~ {
+				.focus-label {
+					opacity: 1;
+					font-weight: variables.$font-weight-normal;
+					top: 0;
+					font-size: variables.$font-size-12;
+					z-index: 1;
+					background-color: variables.$white;
+					color: variables.$primary;
+					padding: 0 5px;
+					left: 11px;
+				}
+			}
+		}
+	}
+}
+.form-focus.focused {
+	.focus-label {
+		opacity: 1;
+		top: 0px;
+		font-size: variables.$font-size-12;
+		z-index: 1;
+		background-color: variables.$white;
+		color: variables.$primary;
+		padding: 0 5px;
+		left: 11px;
+	}
+	.form-control {
+		background: variables.$white;
+		border-color: variables.$primary;
+	}
+}
+.login-content {
+	.btn {
+		width: 100%;
+		height: auto;
+		padding: 8px 20px;
+	}
+	.form-check {
+		.form-check-input {
+			color: variables.$primary;
+		}
+		.terms-links {
+			color: variables.$primary;
+		}
+	}
+}
+.span-or {
+	background-color: variables.$white;
+	padding: 0 10px;
+	z-index: 9;
+	position: relative;
+}
+.login-or {
+	&::before {
+		left: 0;
+		width: 100%;
+		content: "";
+		border-top: 1px solid #DBDBDB;
+		position: absolute;
+		top: 50%;
+	}
+	&::after {
+		right: 0;
+		width: 100%;
+		content: "";
+		border-top: 1px solid #DBDBDB;
+		position: absolute;
+		top: 50%;
+	}
+	text-align: center;
+	font-size: variables.$font-size-14;
+	font-weight: variables.$font-weight-medium;
+	color: variables.$gray-900;
+	margin: 24px 0;
+	padding: 10px 0;
+	position: relative;
+}
+.login-social-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+  @include mixins.respond-below(md) {
+		display: block;
+	}
+	li {
+		width: 50%;
+    @include mixins.respond-below(md) {
+      width: 100%;
+   }
+		a {
+			box-shadow: 0px 4.4px 12px -1px #DEDEDE5C;
+			font-weight: variables.$font-weight-medium;
+			color: variables.$gray-900;
+			padding: 11px 10px;
+			border-radius: 10px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			justify-content: center;
+			-webkit-justify-content: center;
+			-ms-flex-pack: center;
+			background-color: variables.$white;
+			border: 1px solid variables.$gray-100;
+      @include mixins.respond-below(lg) {
+        font-size: variables.$font-size-16;
+      }
+			&:hover {
+				border: 1px solid #FF7F25;
+				color: #FF7F25;
+			}
+			img {
+				margin-right: 5px;
+			}
+		}
+		+ {
+			li {
+				margin-left: 15px;
+        @include mixins.respond-below(md) {
+          margin: 15px 0 0;
+        }
+			}
+		}
+	}
+}
+.acc-in {
+	text-align: center;
+	margin-top: 60px;
+  @include mixins.respond-below(lg) {
+		margin-top: 50px;
+	}
+	p {
+		font-size: variables.$font-size-14;
+		font-weight: variables.$font-weight-normal;
+		margin-bottom: 0;
+		a {
+			color: variables.$primary;
+		}
+	}
+}
+.authentication-wrapper {
+	background: variables.$primary;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+  @include mixins.respond-below(lg) {
+		display: none;
+	}
+}
+.authentication-content {
+	height: 100%;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: end;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: end;
+}
+.login-slider {
+	padding: 0 80px;
+	text-align: center;
+	h2 {
+		color: variables.$white;
+		margin-bottom: 10px;
+    @include mixins.respond-below(xxl) {
+      font-size: variables.$font-size-30;
+    }
+    @include mixins.respond-below(xl) {
+      font-size: variables.$font-size-26;
+    }
+	}
+	p {
+		color: variables.$white;
+		font-weight: variables.$font-weight-semibold;
+		margin-bottom: 0;
+	}
+}
+.login-carousel {
+	margin-bottom: 80px;
+  @include mixins.respond-below(xxl) {
+    margin-bottom: 40px;
+  }
+	.owl-dots {
+		text-align: center;
+	}
+	.login-slider {
+		img {
+			width: auto;
+			margin: 0 auto 60px;
+      @include mixins.respond-below(xxl) {
+        width: 80%;
+	      margin: 0 auto 30px;
+      }
+		}
+	}
+}
+.login-bg {
+  @include mixins.respond-below(xxl) {
+    width: 120px;
+  }
+	.shape-01 {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.shape-04 {
+		position: absolute;
+		top: 25%;
+		left: 50px;
+    @include mixins.respond-below(xl) {
+      width: 50px;
+    }
+	}
+	.shape-02 {
+		position: absolute;
+		top: 3%;
+		right: 5%;
+    @include mixins.respond-below(xl) {
+      width: 60px;
+    }
+	}
+	.shape-03 {
+		position: absolute;
+		top: 8%;
+		left: 45%;
+    @include mixins.respond-below(xl) {
+      width: 50px;
+    }
+	}
+	.shape-05 {
+		position: absolute;
+		bottom: 10px;
+		left: 50px;
+		animation: spin 3000ms linear infinite;
+    @include mixins.respond-below(xl) {
+      width: 50px;
+    }
+	}
+	.shape-06 {
+		position: absolute;
+		bottom: 0;
+		left: 45%;
+	}
+	.shape-07 {
+		position: absolute;
+		bottom: 0;
+		left: 70%;
+	}
+}
+.forgot-link {
+	font-size: variables.$font-size-14;
+	font-weight: variables.$font-weight-semibold;
+	color: variables.$primary;
+}
+.mantadory-info {
+	p {
+		color: #E82646;
+		margin-bottom: 0;
+		i {
+			margin-right: 8px;
+		}
+	}
+}
+.card-property {
+	border-radius: 5px;
+	border-color: variables.$white;
+	padding: 20px;
+	p {
+		color: #000000;
+		margin-bottom: 16px;
+	}
+	.btn-dark {
+		padding: 6px 12px;
+		font-size: variables.$font-size-12;
+		font-weight: variables.$font-weight-normal;
+		background: variables.$dark;
+		&:hover {
+			background-color: variables.$primary;
+			transition: 0.5s all;
+		}
+	}
+	.payment-gateway {
+		.radio-btn {
+			top: 34%;
+		}
+	}
+}
+.Recent-card {
+	.owl-nav {
+		position: absolute;
+		top: -77px;
+		right: 0px;
+    @include mixins.respond-below(sm) {
+      top: 37%;
+      justify-content: space-between !important;
+      width: 100%;
+    }
+	}
+}
+.main-search-custom {
+	width: 200px;
+	margin-left: auto;
+}

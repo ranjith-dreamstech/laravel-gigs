@@ -1,0 +1,122 @@
+@use "../utils/variables";
+
+.avatar {
+	position: relative;
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	& > img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
+	.border {
+		border-width: 3px !important;
+	}
+	.rounded {
+		border-radius: 6px !important;
+	}
+	.avatar-title {
+		font-size: variables.$font-size-18;
+	}
+}
+.avatar-title {
+	width: 100%;
+	height: 100%;
+	background-color: #20c0f3;
+	color: variables.$white;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+}
+.avatar-away::before,
+.avatar-offline::before,
+.avatar-online::before {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 25%;
+	height: 25%;
+	border-radius: 50%;
+	content: '';
+	border: 2px solid variables.$white;
+}
+.avatar-online {
+	&::before {
+		background-color: #0C9E6F;
+	}
+}
+.avatar-away {
+	&::before {
+		background-color: #ffbc34;
+	}
+}
+.avatar-xs {
+	width: 29px;
+	height: 29px;
+	.border {
+		border-width: 2px !important;
+	}
+	.rounded {
+		border-radius: 4px !important;
+	}
+	.avatar-title {
+		font-size: variables.$font-size-12;
+	}
+}
+.avatar-xs.avatar-away::before,
+.avatar-xs.avatar-offline::before,
+.avatar-xs.avatar-online::before {
+	border-width: 1px;
+}
+.avatar-sm {
+	width: 2.5rem;
+	height: 2.5rem;
+	.border {
+		border-width: 3px !important;
+	}
+	.rounded {
+		border-radius: 4px !important;
+	}
+	.avatar-title {
+		font-size: variables.$font-size-15;
+	}
+}
+.avatar-sm.avatar-away::before,
+.avatar-sm.avatar-offline::before,
+.avatar-sm.avatar-online::before {
+	border-width: 2px;
+}
+.avatar-lg {
+	width: 3.75rem;
+	height: 3.75rem;
+	.border {
+		border-width: 3px !important;
+	}
+	.rounded {
+		border-radius: 8px !important;
+	}
+	.avatar-title {
+		font-size: variables.$font-size-24;
+	}
+}
+.avatar-lg.avatar-away::before,
+.avatar-lg.avatar-offline::before,
+.avatar-lg.avatar-online::before {
+	border-width: 3px;
+}
+textarea {
+	resize: none;
+}
+.avatar-info {
+	i {
+		font-size: variables.$font-size-24 !important;
+	}
+}
